@@ -1,0 +1,25 @@
+plot_id,plot_type,dist_from_river,surface_terriere,dbh,age,height,pc_conif
+3,Long-term Krat Exclosure,10,0,0,1,0,39
+17,Control,200,0,0,2,0,61
+8,Control,50,2,10,3,10,83
+23,Rodent Exclosure,100,0,0,3,0,55
+13,Short-term Krat Exclosure,50,4,10,3,7,72
+12,Control,100,2,10,4,4,81
+19,Long-term Krat Exclosure,100,6,12,5,9,40
+10,Rodent Exclosure,50,4,13,6,10,26
+20,Short-term Krat Exclosure,200,6,12,6,13,83
+1,Spectab exclosure,10,6,12,6,12,71
+2,Control,10,8,11,9,14,55
+5,Rodent Exclosure,10,6,11,10,15,70
+21,Long-term Krat Exclosure,200,24,20,44,24,79
+7,Rodent Exclosure,10,28,18,46,28,91
+18,Short-term Krat Exclosure,100,22,18,48,23,46
+11,Control,50,28,21,50,26,12
+9,Spectab exclosure,100,26,21,51,21,10
+15,Long-term Krat Exclosure,50,18,23,52,26,30
+4,Control,10,22,23,54,30,99
+16,Rodent Exclosure,50,18,25,54,29,75
+22,Control,200,22,20,55,21,33
+14,Control,100,28,19,56,23,35
+6,Short-term Krat Exclosure,10,16,25,57,18,68
+24,Rodent Exclosure,200,20,24,59,28,54
