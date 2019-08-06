@@ -1,43 +1,35 @@
 {% comment %}
-  Find previous and next episodes (if any).
+For some reason, the relative_root_path seems out of scope in this file, so we
+need to re-assign it here
 {% endcomment %}
-{% for episode in site.episodes  %}
-  {% if episode.url == page.url %}
-    {% unless forloop.first %}
-      {% assign prev_episode = prev %}
-    {% endunless %}
-    {% unless forloop.last %}
-      {% assign next_episode = site.episodes[forloop.index] %}
-    {% endunless %}
-  {% endif %}
-  {% assign prev = episode %}
-{% endfor %}
+
+{% include base_path.html %}
 
 {% comment %}
-  Display title and prev/next links.
+  Navigation bar for an episode.
 {% endcomment %}
+
 <div class="row">
-  <div class="col-md-1">
-    <h3>
-      {% if prev_episode %}
-      <a href="{{ page.root }}{{ prev_episode.url }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      {% if page.previous.url %}
+      <a href="{{ relative_root_path }}{{ page.previous.url }}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
       {% else %}
-      <a href="{{ page.root }}/"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      <a href="{{ relative_root_path }}/"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
       {% endif %}
     </h3>
   </div>
-  <div class="col-md-10">
+  <div class="col-xs-10">
     {% if include.episode_navbar_title %}
-    <h3 class="maintitle"><a href="{{ page.root }}/">{{ site.title }}</a></h3>
-    <h1 class="maintitle">{{ page.title }}</h1>
+    <h3 class="maintitle"><a href="{{ relative_root_path }}/">{{ site.title }}</a></h3>
     {% endif %}
   </div>
-  <div class="col-md-1">
-    <h3>
-      {% if next_episode %}
-      <a href="{{ page.root }}{{ next_episode.url }}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      {% if page.next.url %}
+      <a href="{{ relative_root_path }}{{ page.next.url }}"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
       {% else %}
-      <a href="{{ page.root }}/"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      <a href="{{ relative_root_path }}/"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
       {% endif %}
     </h3>
   </div>
